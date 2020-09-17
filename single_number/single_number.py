@@ -5,8 +5,8 @@ Returns: an integer
 def single_number(arr):
     #Your code here
     # set(arr) gives list of elements in array w/o dupls
-    # take the sume of the unique elements in the array times to
-    # then minus the sum of the array
+    #  sum of the unique elements in the array times to
+    #minus the sum of the array
     # what's left over is the odd-number-out
     return 2 * sum(set(arr)) - sum(arr)
 
