@@ -3,9 +3,20 @@ Input: an integer
 Returns: an integer
 '''
 def eating_cookies(n):
-    # Your code here
-
-    pass
+    # some number cookies able to be ate
+    # cookies can be eaten either 1, 2, or 3 at a time
+    # once the jar is empty, no more cookies to eat
+    # a jar cannot have a negative number of cookies
+    # *test file has 0 cookies in jar = 1 way
+    
+    if n < 0:
+        return 0
+    
+    elif n == 0:
+        return 1
+    
+    else:
+        return eating_cookies(n-1) + eating_cookies(n-2) + eating_cookies(n-3)
 
 if __name__ == "__main__":
     # Use the main function here to test out your implementation
